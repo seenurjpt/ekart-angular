@@ -15,7 +15,7 @@ interface link {
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  title = 'Amazon Store';
+  title = 'Ekart';
   sale = {
     value: 50,
     target: 'Everything',

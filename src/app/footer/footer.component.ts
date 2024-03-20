@@ -10,5 +10,5 @@ import { TooltipModule } from 'primeng/tooltip';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  title = 'Amazon Store'
+  title = 'Ekart'
 }
