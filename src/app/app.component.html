@@ -1,0 +1,6 @@
+<app-navbar (searchTerm)="handleSearchText($event)"></app-navbar>
+<div class="home_HeroSection">
+  <app-products-list [searchResultsFor]="searchText" #productListComp></app-products-list>
+  <app-product-details *ngIf="productListComp.selectedProduct" [prodListComponent]="prodListComp"></app-product-details>
+</div>
+<div app-footer></div>

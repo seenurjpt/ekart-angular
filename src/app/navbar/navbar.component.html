@@ -1,0 +1,52 @@
+<div class="nav_container" [ngClass]="isScrolled ? 'nav_scrolled' : ''">
+  <div
+    class="bg-warning text-center text-uppercase fw-bolder text-light fs-5 {{
+      sale.value > 0 ? 'd-block' : 'd-none'
+    }}"
+  >
+    {{ getSaleText() }}
+  </div>
+
+  <div
+    class="d-flex justify-content-between align-items-center p-2 nav_main bg_nav"
+  >
+    <p class="m-0 px-5 d-flex align-items-center" style="cursor: pointer">
+      <img
+        src="../../assets/favicon.png"
+        style="height: 1.7rem; margin-right: 2px"
+      />{{ title }}
+    </p>
+    <div class="input-group w-25" style="padding-left: 4rem">
+      <div class="d-flex">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search Here"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+          [(ngModel)]="searchText"
+          (change)="handleInputSearch($event)"
+        />
+        <button
+          class="input-group-text justify-content-center p-0"
+          [ngClass]="{ 'bg-dark-subtle ': !searchText }"
+          id="basic-addon1"
+        >
+          <img src="../../assets/search_icon.svg" class="w-50 p-0" />
+        </button>
+      </div>
+      <!-- <span class="p-1" *ngIf="searchText !== ''"
+        >Search Results For : "{{ searchText }}""</span
+      > -->
+    </div>
+    <div class="d-flex">
+      <a
+        class="text-decoration-none"
+        *ngFor="let link of links"
+        [href]="link.route"
+        [ngClass]="link.name === 'Home' ? 'active' : ''"
+        >{{ link.name }}</a
+      >
+    </div>
+  </div>
+</div>

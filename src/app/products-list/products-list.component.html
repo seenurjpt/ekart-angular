@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <h5 *ngIf="searchResultsFor.length > 0">
+    Search results for "{{ searchResultsFor }}"
+  </h5>
+  <h3>{{ pageTitle }}</h3>
+  <div>
+    <div class="products_container">
+      <div
+        app-product
+        class="product_card col-3"
+        *ngFor="let product of products"
+        [product]="product"
+        (click)="handleSelectedProduct(product)"
+      ></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.nav_container {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.nav_main a {
+  padding-right: 1.5rem;
+  color: #232f3e;
+  font-weight: 600;
+}
+.nav_main a:hover {
+  color: rgb(255, 193, 7);
+  transition: 0.3s ease-in-out;
+}
+
+.nav_scrolled {
+  box-shadow: 0 0px 22px #232f3e;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.active {
+  color: rgb(255, 193, 7) !important;
+  text-decoration: underline !important;
+}
